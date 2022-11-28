@@ -5,7 +5,7 @@ body, html{
     margin: 0;
 }
 
-h1, h2{
+h1, h2, h3{
     margin:0;
 }
 
@@ -144,6 +144,8 @@ ul{
     grid-template-areas: 
         "p p p a"
         "p p p t";
+    gap: 1rem;
+    padding: 1rem 1rem 2rem;
 }
 
 .projects{
@@ -171,6 +173,7 @@ ul{
     grid-template-rows:1fr 1fr 1fr;
     flex-grow:1;
     gap:1rem;
+    padding: 1rem 0 0;
 }
 
 .projectsGrid > li {

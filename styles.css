@@ -9,6 +9,10 @@ h1, h2{
     margin:0;
 }
 
+p{
+    margin:5px;
+}
+
 ul{
     list-style:none;
     margin: 0;
@@ -32,7 +36,7 @@ ul{
 .sidebar{
     grid-area:s;
     display:grid;
-    grid-template-rows: 80px 1fr 1fr;
+    grid-template-rows: 110px 1fr 1fr;
     grid-template-columns: 1fr;
     background-color: blue;
     
@@ -41,6 +45,11 @@ ul{
 .header{
     grid-area:h;
     background-color: white;
+    display:flex;
+    flex-direction:column;
+    padding:0 2rem;
+    justify-content: center;
+    gap:10px;
 }
 
 .content{
@@ -50,12 +59,39 @@ ul{
 
 
 
-/*Specific Element Styling*/
-.dashMenu > li, .logo{
+/*Header Styling*/
+
+.headerRow{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+}
+
+.search, .profile{
+    display:flex;
+}
+
+.search{
+    gap:20px;
+}
+
+
+
+/*Sidebar Styling*/
+.dashMenu > li{
     display:grid;
     grid-template-columns: 70px 1fr;
     align-items: center;
     padding-bottom:10px;
+}
+
+.logo{
+    display:grid;
+    grid-template-columns: 70px 1fr;
+    padding-top:20px;
+}
+.logo > img{
+    justify-self:center;
 }
 
 .dashMenu li > img{
@@ -69,4 +105,14 @@ ul{
     height:40px;
     width:40px;
     background-color: white;
+}
+
+.searchLabel{
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
 }

@@ -1,3 +1,22 @@
+/*Default Element Styles*/
+body, html{
+    width:100%;
+    height:100%;
+    margin: 0;
+}
+
+h1, h2{
+    margin:0;
+}
+
+ul{
+    list-style:none;
+    margin: 0;
+    padding:0;
+}
+
+
+/*Section Styling*/
 .container{
     display:grid;
     width:100%;
@@ -12,6 +31,9 @@
 
 .sidebar{
     grid-area:s;
+    display:grid;
+    grid-template-rows: 80px 1fr 1fr;
+    grid-template-columns: 1fr;
     background-color: blue;
     
 }
@@ -26,9 +48,25 @@
     background-color: grey;
 }
 
-body, html{
-    width:100%;
-    height:100%;
-    margin: 0;
+
+
+/*Specific Element Styling*/
+.dashMenu > li, .logo{
+    display:grid;
+    grid-template-columns: 70px 1fr;
+    align-items: center;
+    padding-bottom:10px;
 }
 
+.dashMenu li > img{
+    height:20px;
+    width:20px;
+    background-color: white;
+    justify-self:center;
+}
+
+.logo > img{
+    height:40px;
+    width:40px;
+    background-color: white;
+}
